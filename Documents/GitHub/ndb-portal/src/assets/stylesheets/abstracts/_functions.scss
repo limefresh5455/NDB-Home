@@ -1,0 +1,14 @@
+@use "sass:math";
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/// Retuns the converted px value to rem
+/// @param {String} $size - px value
+/// @return {Url}
+
+@function px2rem($value) {
+  $rem-size: math.div($value, 16) + rem;
+  @return #{$rem-size};
+}
